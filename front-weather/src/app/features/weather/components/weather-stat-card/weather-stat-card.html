@@ -1,0 +1,21 @@
+<z-card class="h-full">
+
+  <div z-card-content class="p-6">
+
+    <p class="text-sm font-medium text-muted-foreground">
+      {{ title() }}
+    </p>
+
+    <p class="mt-2 text-3xl font-bold">
+      {{ value() }}
+    </p>
+
+    @if (description()) {
+    <p class="mt-2 text-sm text-muted-foreground">
+      {{ description() }}
+    </p>
+    }
+
+  </div>
+
+</z-card>

@@ -1,0 +1,21 @@
+<div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+
+  <div>
+
+    <z-badge zType="outline">
+      Météo actuelle
+    </z-badge>
+
+    <h1 class="mt-3 text-4xl font-bold tracking-tight">
+      {{ city() }}
+    </h1>
+
+    <p class="mt-2 text-sm text-muted-foreground">
+      Latitude : {{ latitude() }}
+      ·
+      Longitude : {{ longitude() }}
+    </p>
+
+  </div>
+
+</div>

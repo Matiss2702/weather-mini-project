@@ -1,0 +1,98 @@
+<section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+
+  @if (loading()) {
+
+  <div class="space-y-8">
+
+    <div class="space-y-3">
+      <z-skeleton class="h-6 w-28" />
+      <z-skeleton class="h-10 w-52" />
+      <z-skeleton class="h-4 w-72" />
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+      <z-skeleton class="h-36 w-full rounded-xl" />
+      <z-skeleton class="h-36 w-full rounded-xl" />
+      <z-skeleton class="h-36 w-full rounded-xl" />
+
+    </div>
+
+  </div>
+
+  } @else if (error()) {
+
+  <div class="mx-auto max-w-xl py-16">
+
+    <z-alert
+      zTitle="Impossible de récupérer la météo"
+      [zDescription]="error()!"
+    />
+
+    <div class="mt-6 flex justify-center">
+
+      <a
+        routerLink="/"
+        z-button
+        zType="outline"
+      >
+        Nouvelle recherche
+      </a>
+
+    </div>
+
+  </div>
+
+  } @else if (weather()) {
+
+  <div class="space-y-8">
+
+    <app-weather-header
+      [city]="weather()!.city"
+      [latitude]="weather()!.latitude"
+      [longitude]="weather()!.longitude"
+    />
+
+    <z-separator />
+
+    <div
+      class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+    >
+
+      <app-weather-stat-card
+        title="Température"
+        [value]="weather()!.temperature + ' °C'"
+        description="Température actuelle"
+      />
+
+      <app-weather-stat-card
+        title="Vent"
+        [value]="weather()!.windSpeed + ' km/h'"
+        description="Vitesse du vent à 10 mètres"
+      />
+
+      <app-weather-stat-card
+        title="Dernière mesure"
+        [value]="formatTimestamp(weather()!.timestamp)"
+        description="Heure de la dernière observation"
+      />
+
+    </div>
+
+    <div class="flex justify-center pt-4">
+
+      <a
+        routerLink="/"
+        z-button
+        zType="outline"
+      >
+        Rechercher une autre ville
+      </a>
+
+    </div>
+
+  </div>
+
+  }
+
+</section>
