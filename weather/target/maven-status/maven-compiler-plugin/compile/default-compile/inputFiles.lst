@@ -1,0 +1,9 @@
+/Users/mhaillouy/IdeaProjects/weather/src/main/java/com/example/weather/WeatherApplication.java
+/Users/mhaillouy/IdeaProjects/weather/src/main/java/com/example/weather/config/SecurityConfig.java
+/Users/mhaillouy/IdeaProjects/weather/src/main/java/com/example/weather/controller/WeatherController.java
+/Users/mhaillouy/IdeaProjects/weather/src/main/java/com/example/weather/dto/CurrentWeather.java
+/Users/mhaillouy/IdeaProjects/weather/src/main/java/com/example/weather/dto/ForecastResponse.java
+/Users/mhaillouy/IdeaProjects/weather/src/main/java/com/example/weather/dto/GeocodingResponse.java
+/Users/mhaillouy/IdeaProjects/weather/src/main/java/com/example/weather/dto/GeocodingResult.java
+/Users/mhaillouy/IdeaProjects/weather/src/main/java/com/example/weather/dto/WeatherResponse.java
+/Users/mhaillouy/IdeaProjects/weather/src/main/java/com/example/weather/service/WeatherService.java
