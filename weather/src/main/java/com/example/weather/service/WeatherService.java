@@ -1,6 +1,9 @@
 package com.example.weather.service;
 
-import com.example.weather.dto.*;
+import com.example.weather.dto.ForecastResponse;
+import com.example.weather.dto.GeocodingResponse;
+import com.example.weather.dto.GeocodingResult;
+import com.example.weather.dto.WeatherResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
@@ -44,7 +47,7 @@ public class WeatherService {
         ForecastResponse forecast =
                 weatherClient.get()
                         .uri(
-                                "/forecast?latitude={lat}&longitude={lon}&current=temperature_2m,wind_speed_10m&timeformat=unixtime",
+                                "/forecast?latitude={lat}&longitude={lon}&current=temperature_2m,wind_speed_10m,weather_code&timeformat=unixtime",
                                 location.latitude(),
                                 location.longitude()
                         )
@@ -57,7 +60,8 @@ public class WeatherService {
                 forecast.current().wind_speed_10m(),
                 forecast.current().time(),
                 forecast.latitude(),
-                forecast.longitude()
+                forecast.longitude(),
+                forecast.current().weather_code()
         );
     }
 }

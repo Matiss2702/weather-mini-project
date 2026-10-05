@@ -4,6 +4,5 @@ public record GeocodingResult
 (
     String name,
     double longitude,
-    double latitude,
-    String country
+    double latitude
 ){}

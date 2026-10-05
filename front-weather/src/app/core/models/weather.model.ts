@@ -5,4 +5,5 @@ export interface Weather {
   windSpeed: number;
   latitude: number;
   longitude: number;
+  weatherCode: number;
 }

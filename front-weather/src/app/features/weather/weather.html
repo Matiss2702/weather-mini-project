@@ -77,6 +77,12 @@
         description="Heure de la dernière observation"
       />
 
+      <app-weather-stat-card
+        title="Conditions"
+        [value]="getWeatherDescription(weather()!.weatherCode)"
+        description="Conditions météorologiques actuelles"
+      />
+
     </div>
 
     <div class="flex justify-center pt-4">

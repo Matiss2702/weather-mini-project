@@ -7,5 +7,6 @@ public record WeatherResponse
         double windSpeed,
         Long timestamp,
         double latitude,
-        double longitude
+        double longitude,
+        int weatherCode
 ) {}
